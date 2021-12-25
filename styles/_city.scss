@@ -1,0 +1,62 @@
+.morning,
+.night {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+.morning {
+  background-image: url("../public/morning.jpeg");
+}
+.night {
+  background-image: url("../public/night.jpeg");
+}
+.city {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #333;
+  img {
+    border-radius: 5px;
+  }
+  .location {
+    text-align: center;
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  h1 {
+    position: relative;
+    font-size: 40px;
+    &::after {
+      content: "C";
+      font-size: 25px;
+      position: absolute;
+      top: -15px;
+      right: -40px;
+    }
+    &::before {
+      content: "o";
+      font-size: 25px;
+      position: absolute;
+      right: -20px;
+      top: -15px;
+    }
+  }
+  .real-feel {
+    position: relative;
+    &::after {
+      content: "oC";
+      font-size: 20px;
+      position: absolute;
+      top: -15px;
+      //   right: -40px;
+    }
+  }
+}
