@@ -1,6 +1,16 @@
+h1.head-title {
+  color: #fff;
+  padding: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #03a9f4;
+  border-radius: 10px;
+}
 .morning,
 .night {
   min-height: 100vh;
+  padding: 20px;
   background-size: cover;
   position: relative;
 }
@@ -13,13 +23,26 @@
 .city {
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  max-width: 60%;
   background-color: rgba($color: #fff, $alpha: 0.7);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #333;
+  @media (max-width: 500px) {
+    max-width: 90%;
+  }
   img {
     border-radius: 5px;
+  }
+  .error {
+    background-color: #f44336;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 10px;
   }
   .location {
     text-align: center;
@@ -30,10 +53,23 @@
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
+
+    & > h3 {
+      width: 50%;
+      text-align: center;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
   }
   h1 {
     position: relative;
     font-size: 40px;
+    background-color: #e91e63;
+    border-radius: 4px;
+    padding: 5px;
+    color: #fff;
     &::after {
       content: "C";
       font-size: 25px;
@@ -47,6 +83,9 @@
       position: absolute;
       right: -20px;
       top: -15px;
+    }
+    @media (max-width: 500px) {
+      font-size: 25px;
     }
   }
   .real-feel {

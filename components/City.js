@@ -1,8 +1,15 @@
-function City({ data }) {
+import Form from "./Form";
+function City({ data, fetchHandler, error }) {
   const { current, location } = data;
 
   let city = (
     <div className="city">
+      <Form fetchHandler={fetchHandler} />
+      {error && (
+        <div className="error">
+          <h2>Unknown City</h2>
+        </div>
+      )}
       <div>
         <img src={current.weather_icons} alt={current.weather_descriptions} />
       </div>
@@ -11,7 +18,7 @@ function City({ data }) {
         <h3>{location.country.toUpperCase()}</h3>
       </div>
       <div>
-        <h1>{current.temperature}</h1>
+        <h1>Temperature : {current.temperature}</h1>
       </div>
       <div>
         <h3 className="real-feel">Real Feel : {current.feelslike}</h3>

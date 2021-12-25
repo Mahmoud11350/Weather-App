@@ -9,7 +9,7 @@ function Form({ fetchHandler }) {
   return (
     <form onSubmit={submitHandler}>
       <input
-        type="text"
+        type="search"
         placeholder="Enter City Name"
         value={input}
         onChange={(e) => setInput(e.target.value)}

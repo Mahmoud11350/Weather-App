@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Weather from "./components/Weather";
+import Weather from "../components/Weather";
 
 export default function Home() {
   <Head>
