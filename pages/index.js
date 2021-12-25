@@ -4,6 +4,10 @@ import Weather from "../components/Weather";
 export default function Home() {
   <Head>
     <title>Weather App</title>
+    <meta
+      httpEquiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
   </Head>;
   return (
     <>
